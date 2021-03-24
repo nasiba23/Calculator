@@ -16,25 +16,5 @@ namespace HomeworkLesson19
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void signBtn_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
