@@ -62,18 +62,19 @@ namespace HomeworkLesson19
             this._zeroBtn = new System.Windows.Forms.Button();
             this._pointBtn = new System.Windows.Forms.Button();
             this._equalBtn = new System.Windows.Forms.Button();
+            this.operationTxtBx = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // inputTxtBx
+            // _inputTxtBx
             // 
-            this._inputTxtBx.Location = new System.Drawing.Point(1, 34);
+            this._inputTxtBx.Location = new System.Drawing.Point(1, 63);
             this._inputTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this._inputTxtBx.Name = "_inputTxtBx";
-            this._inputTxtBx.Size = new System.Drawing.Size(510, 140);
+            this._inputTxtBx.Size = new System.Drawing.Size(510, 111);
             this._inputTxtBx.TabIndex = 0;
             this._inputTxtBx.Text = "";
             // 
-            // mcBtn
+            // _mcBtn
             // 
             this._mcBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._mcBtn.Location = new System.Drawing.Point(1, 177);
@@ -83,7 +84,7 @@ namespace HomeworkLesson19
             this._mcBtn.Text = "MC";
             this._mcBtn.UseVisualStyleBackColor = false;
             // 
-            // mrBtn
+            // _mrBtn
             // 
             this._mrBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._mrBtn.Location = new System.Drawing.Point(87, 177);
@@ -93,7 +94,7 @@ namespace HomeworkLesson19
             this._mrBtn.Text = "MR";
             this._mrBtn.UseVisualStyleBackColor = false;
             // 
-            // mPlusBtn
+            // _mPlusBtn
             // 
             this._mPlusBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._mPlusBtn.Location = new System.Drawing.Point(173, 177);
@@ -103,7 +104,7 @@ namespace HomeworkLesson19
             this._mPlusBtn.Text = "M+";
             this._mPlusBtn.UseVisualStyleBackColor = false;
             // 
-            // mMinusBtn
+            // _mMinusBtn
             // 
             this._mMinusBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._mMinusBtn.Location = new System.Drawing.Point(259, 177);
@@ -113,7 +114,7 @@ namespace HomeworkLesson19
             this._mMinusBtn.Text = "M-";
             this._mMinusBtn.UseVisualStyleBackColor = false;
             // 
-            // msBtn
+            // _msBtn
             // 
             this._msBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._msBtn.Location = new System.Drawing.Point(345, 177);
@@ -123,7 +124,7 @@ namespace HomeworkLesson19
             this._msBtn.Text = "MS";
             this._msBtn.UseVisualStyleBackColor = false;
             // 
-            // mBtn
+            // _mBtn
             // 
             this._mBtn.BackColor = System.Drawing.SystemColors.ControlDark;
             this._mBtn.Location = new System.Drawing.Point(431, 177);
@@ -133,7 +134,7 @@ namespace HomeworkLesson19
             this._mBtn.Text = "M";
             this._mBtn.UseVisualStyleBackColor = false;
             // 
-            // percentBtn
+            // _percentBtn
             // 
             this._percentBtn.Location = new System.Drawing.Point(1, 228);
             this._percentBtn.Name = "_percentBtn";
@@ -142,7 +143,7 @@ namespace HomeworkLesson19
             this._percentBtn.Text = "%";
             this._percentBtn.UseVisualStyleBackColor = true;
             // 
-            // rootBtn
+            // _rootBtn
             // 
             this._rootBtn.Location = new System.Drawing.Point(130, 228);
             this._rootBtn.Name = "_rootBtn";
@@ -151,7 +152,7 @@ namespace HomeworkLesson19
             this._rootBtn.Text = "√";
             this._rootBtn.UseVisualStyleBackColor = true;
             // 
-            // squaredBtn
+            // _squaredBtn
             // 
             this._squaredBtn.Location = new System.Drawing.Point(259, 228);
             this._squaredBtn.Name = "_squaredBtn";
@@ -160,7 +161,7 @@ namespace HomeworkLesson19
             this._squaredBtn.Text = "x²";
             this._squaredBtn.UseVisualStyleBackColor = true;
             // 
-            // invertBtn
+            // _invertBtn
             // 
             this._invertBtn.Location = new System.Drawing.Point(388, 228);
             this._invertBtn.Name = "_invertBtn";
@@ -169,7 +170,7 @@ namespace HomeworkLesson19
             this._invertBtn.Text = "1/x";
             this._invertBtn.UseVisualStyleBackColor = true;
             // 
-            // cBtn
+            // _cBtn
             // 
             this._cBtn.Location = new System.Drawing.Point(130, 309);
             this._cBtn.Name = "_cBtn";
@@ -178,7 +179,7 @@ namespace HomeworkLesson19
             this._cBtn.Text = "C";
             this._cBtn.UseVisualStyleBackColor = true;
             // 
-            // eightBtn
+            // _eightBtn
             // 
             this._eightBtn.BackColor = System.Drawing.SystemColors.Window;
             this._eightBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -188,8 +189,9 @@ namespace HomeworkLesson19
             this._eightBtn.TabIndex = 12;
             this._eightBtn.Text = "8";
             this._eightBtn.UseVisualStyleBackColor = false;
+            this._eightBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // xBtn
+            // _xBtn
             // 
             this._xBtn.Location = new System.Drawing.Point(259, 309);
             this._xBtn.Name = "_xBtn";
@@ -198,7 +200,7 @@ namespace HomeworkLesson19
             this._xBtn.Text = "<=X";
             this._xBtn.UseVisualStyleBackColor = true;
             // 
-            // multiplyBtn
+            // _multiplyBtn
             // 
             this._multiplyBtn.Location = new System.Drawing.Point(388, 390);
             this._multiplyBtn.Name = "_multiplyBtn";
@@ -207,7 +209,7 @@ namespace HomeworkLesson19
             this._multiplyBtn.Text = "X";
             this._multiplyBtn.UseVisualStyleBackColor = true;
             // 
-            // divideBtn
+            // _divideBtn
             // 
             this._divideBtn.Location = new System.Drawing.Point(388, 309);
             this._divideBtn.Name = "_divideBtn";
@@ -216,7 +218,7 @@ namespace HomeworkLesson19
             this._divideBtn.Text = "/";
             this._divideBtn.UseVisualStyleBackColor = true;
             // 
-            // nineBtn
+            // _nineBtn
             // 
             this._nineBtn.BackColor = System.Drawing.SystemColors.Window;
             this._nineBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -226,8 +228,9 @@ namespace HomeworkLesson19
             this._nineBtn.TabIndex = 16;
             this._nineBtn.Text = "9";
             this._nineBtn.UseVisualStyleBackColor = false;
+            this._nineBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // ceBtn
+            // _ceBtn
             // 
             this._ceBtn.Location = new System.Drawing.Point(1, 309);
             this._ceBtn.Name = "_ceBtn";
@@ -236,7 +239,7 @@ namespace HomeworkLesson19
             this._ceBtn.Text = "CE";
             this._ceBtn.UseVisualStyleBackColor = true;
             // 
-            // sevenBtn
+            // _sevenBtn
             // 
             this._sevenBtn.BackColor = System.Drawing.SystemColors.Window;
             this._sevenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -246,8 +249,9 @@ namespace HomeworkLesson19
             this._sevenBtn.TabIndex = 18;
             this._sevenBtn.Text = "7";
             this._sevenBtn.UseVisualStyleBackColor = false;
+            this._sevenBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // fourBtn
+            // _fourBtn
             // 
             this._fourBtn.BackColor = System.Drawing.SystemColors.Window;
             this._fourBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -257,8 +261,9 @@ namespace HomeworkLesson19
             this._fourBtn.TabIndex = 19;
             this._fourBtn.Text = "4";
             this._fourBtn.UseVisualStyleBackColor = false;
+            this._fourBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // fiveBtn
+            // _fiveBtn
             // 
             this._fiveBtn.BackColor = System.Drawing.SystemColors.Window;
             this._fiveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -268,8 +273,9 @@ namespace HomeworkLesson19
             this._fiveBtn.TabIndex = 20;
             this._fiveBtn.Text = "5";
             this._fiveBtn.UseVisualStyleBackColor = false;
+            this._fiveBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // sixBtn
+            // _sixBtn
             // 
             this._sixBtn.BackColor = System.Drawing.SystemColors.Window;
             this._sixBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -279,8 +285,9 @@ namespace HomeworkLesson19
             this._sixBtn.TabIndex = 21;
             this._sixBtn.Text = "6";
             this._sixBtn.UseVisualStyleBackColor = false;
+            this._sixBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // minusBtn
+            // _minusBtn
             // 
             this._minusBtn.Location = new System.Drawing.Point(388, 471);
             this._minusBtn.Name = "_minusBtn";
@@ -289,7 +296,7 @@ namespace HomeworkLesson19
             this._minusBtn.Text = "-";
             this._minusBtn.UseVisualStyleBackColor = true;
             // 
-            // oneBtn
+            // _oneBtn
             // 
             this._oneBtn.BackColor = System.Drawing.SystemColors.Window;
             this._oneBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -299,8 +306,9 @@ namespace HomeworkLesson19
             this._oneBtn.TabIndex = 23;
             this._oneBtn.Text = "1";
             this._oneBtn.UseVisualStyleBackColor = false;
+            this._oneBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // twoBtn
+            // _twoBtn
             // 
             this._twoBtn.BackColor = System.Drawing.SystemColors.Window;
             this._twoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -310,8 +318,9 @@ namespace HomeworkLesson19
             this._twoBtn.TabIndex = 24;
             this._twoBtn.Text = "2";
             this._twoBtn.UseVisualStyleBackColor = false;
+            this._twoBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // threeBtn
+            // _threeBtn
             // 
             this._threeBtn.BackColor = System.Drawing.SystemColors.Window;
             this._threeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -321,8 +330,9 @@ namespace HomeworkLesson19
             this._threeBtn.TabIndex = 25;
             this._threeBtn.Text = "3";
             this._threeBtn.UseVisualStyleBackColor = false;
+            this._threeBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // plusButton
+            // _plusBtn
             // 
             this._plusBtn.Location = new System.Drawing.Point(388, 552);
             this._plusBtn.Name = "_plusBtn";
@@ -330,8 +340,9 @@ namespace HomeworkLesson19
             this._plusBtn.TabIndex = 26;
             this._plusBtn.Text = "+";
             this._plusBtn.UseVisualStyleBackColor = true;
+            this._plusBtn.Click += new System.EventHandler(this._plusBtn_Click);
             // 
-            // signBtn
+            // _signBtn
             // 
             this._signBtn.Location = new System.Drawing.Point(1, 633);
             this._signBtn.Name = "_signBtn";
@@ -339,8 +350,9 @@ namespace HomeworkLesson19
             this._signBtn.TabIndex = 27;
             this._signBtn.Text = "+-";
             this._signBtn.UseVisualStyleBackColor = true;
+            this._signBtn.Click += new System.EventHandler(this._signBtn_Click);
             // 
-            // zeroBtn
+            // _zeroBtn
             // 
             this._zeroBtn.BackColor = System.Drawing.SystemColors.Window;
             this._zeroBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -350,8 +362,9 @@ namespace HomeworkLesson19
             this._zeroBtn.TabIndex = 28;
             this._zeroBtn.Text = "0";
             this._zeroBtn.UseVisualStyleBackColor = false;
+            this._zeroBtn.Click += new System.EventHandler(this._btn_Click);
             // 
-            // pointBtn
+            // _pointBtn
             // 
             this._pointBtn.Location = new System.Drawing.Point(259, 633);
             this._pointBtn.Name = "_pointBtn";
@@ -359,8 +372,9 @@ namespace HomeworkLesson19
             this._pointBtn.TabIndex = 29;
             this._pointBtn.Text = ".";
             this._pointBtn.UseVisualStyleBackColor = true;
+            this._pointBtn.Click += new System.EventHandler(this._pointBtn_Click);
             // 
-            // equalBtn
+            // _equalBtn
             // 
             this._equalBtn.Location = new System.Drawing.Point(388, 633);
             this._equalBtn.Name = "_equalBtn";
@@ -368,13 +382,23 @@ namespace HomeworkLesson19
             this._equalBtn.TabIndex = 30;
             this._equalBtn.Text = "=";
             this._equalBtn.UseVisualStyleBackColor = true;
+            this._equalBtn.Click += new System.EventHandler(this._equalBtn_Click);
+            // 
+            // operationTxtBx
+            // 
+            this.operationTxtBx.Location = new System.Drawing.Point(1, 4);
+            this.operationTxtBx.Margin = new System.Windows.Forms.Padding(0);
+            this.operationTxtBx.Name = "operationTxtBx";
+            this.operationTxtBx.Size = new System.Drawing.Size(510, 59);
+            this.operationTxtBx.TabIndex = 31;
+            this.operationTxtBx.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 724);
-            
+            this.Controls.Add(this.operationTxtBx);
             this.Controls.Add(this._equalBtn);
             this.Controls.Add(this._pointBtn);
             this.Controls.Add(this._zeroBtn);
@@ -410,7 +434,9 @@ namespace HomeworkLesson19
             this.Text = "Calculator";
             this.ResumeLayout(false);
         }
-        
+
+        private System.Windows.Forms.RichTextBox operationTxtBx;
+
         private RichTextBox _inputTxtBx;
         private Button _mcBtn;
         private Button _mrBtn;
