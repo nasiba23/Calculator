@@ -20,14 +20,14 @@ namespace HomeworkLesson19
             InitializeComponent();
         }
 
-        private void _btn_Click(object sender, EventArgs e)
+        private void numberBtn_Click(object sender, EventArgs e)
         {
             if (_isEqualClicked)
             {
                 _inputTxtBx.Text = "";
             }
-            var a = sender as Button;
-            _inputTxtBx.Text += a.Text;
+            var op = sender as Button;
+            _inputTxtBx.Text += op.Text;
         }
 
         private void _pointBtn_Click(object sender, EventArgs e)
@@ -51,12 +51,26 @@ namespace HomeworkLesson19
                 _inputTxtBx.Text = "-" + _inputTxtBx.Text;
             }
         }
-
-        private void _plusBtn_Click(object sender, EventArgs e)
+        private void operator_Click(object sender, EventArgs e)
         {
             _isEqualClicked = false;
-            operationTxtBx.Text += _inputTxtBx.Text + " + ";
-            //TODO: сделать так, чтобы текст инпута плюсовался при каждом нажатии +
+            var op = sender as Button;
+            operationTxtBx.Text += $"{_inputTxtBx.Text} {op.Text} ";
+            //TODO: сделать так, чтобы текст инпута умножал при каждом нажатии *
+            _inputTxtBx.Text = "";
+        }
+        private void _percentBtn_Click(object sender, EventArgs e)
+        {
+            _isEqualClicked = false;
+            var temp = operationTxtBx.Text;
+            if (!string.IsNullOrEmpty(operationTxtBx.Text.LastOrDefault(Char.IsPunctuation).ToString()))
+            {
+                temp = operationTxtBx.Text.Remove(operationTxtBx.Text.Length - 2, 1);
+            }
+            var dt = new DataTable();
+            var opResult = dt.Compute(temp, "");
+            var result = double.Parse(opResult.ToString()) * 100 / double.Parse(_inputTxtBx.Text);
+            operationTxtBx.Text += result.ToString();
             _inputTxtBx.Text = "";
         }
 
@@ -66,8 +80,7 @@ namespace HomeworkLesson19
             {
                 operationTxtBx.Text += _inputTxtBx.Text;
             }
-
-            if (!string.IsNullOrEmpty(operationTxtBx.Text.LastOrDefault(Char.IsPunctuation).ToString()))
+            if ((operationTxtBx.Text.Select(ch => char.IsPunctuation(ch)).LastOrDefault()));
             {
                 operationTxtBx.Text = operationTxtBx.Text.Remove(operationTxtBx.Text.Length - 2, 1);
             }

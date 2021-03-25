@@ -142,6 +142,7 @@ namespace HomeworkLesson19
             this._percentBtn.TabIndex = 7;
             this._percentBtn.Text = "%";
             this._percentBtn.UseVisualStyleBackColor = true;
+            this._percentBtn.Click += new System.EventHandler(this._percentBtn_Click);
             // 
             // _rootBtn
             // 
@@ -189,7 +190,7 @@ namespace HomeworkLesson19
             this._eightBtn.TabIndex = 12;
             this._eightBtn.Text = "8";
             this._eightBtn.UseVisualStyleBackColor = false;
-            this._eightBtn.Click += new System.EventHandler(this._btn_Click);
+            this._eightBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _xBtn
             // 
@@ -197,7 +198,7 @@ namespace HomeworkLesson19
             this._xBtn.Name = "_xBtn";
             this._xBtn.Size = new System.Drawing.Size(123, 75);
             this._xBtn.TabIndex = 13;
-            this._xBtn.Text = "<=X";
+            this._xBtn.Text = "<=";
             this._xBtn.UseVisualStyleBackColor = true;
             // 
             // _multiplyBtn
@@ -206,8 +207,9 @@ namespace HomeworkLesson19
             this._multiplyBtn.Name = "_multiplyBtn";
             this._multiplyBtn.Size = new System.Drawing.Size(123, 75);
             this._multiplyBtn.TabIndex = 14;
-            this._multiplyBtn.Text = "X";
+            this._multiplyBtn.Text = "*";
             this._multiplyBtn.UseVisualStyleBackColor = true;
+            this._multiplyBtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // _divideBtn
             // 
@@ -217,6 +219,7 @@ namespace HomeworkLesson19
             this._divideBtn.TabIndex = 15;
             this._divideBtn.Text = "/";
             this._divideBtn.UseVisualStyleBackColor = true;
+            this._divideBtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // _nineBtn
             // 
@@ -228,7 +231,7 @@ namespace HomeworkLesson19
             this._nineBtn.TabIndex = 16;
             this._nineBtn.Text = "9";
             this._nineBtn.UseVisualStyleBackColor = false;
-            this._nineBtn.Click += new System.EventHandler(this._btn_Click);
+            this._nineBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _ceBtn
             // 
@@ -249,7 +252,7 @@ namespace HomeworkLesson19
             this._sevenBtn.TabIndex = 18;
             this._sevenBtn.Text = "7";
             this._sevenBtn.UseVisualStyleBackColor = false;
-            this._sevenBtn.Click += new System.EventHandler(this._btn_Click);
+            this._sevenBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _fourBtn
             // 
@@ -261,7 +264,7 @@ namespace HomeworkLesson19
             this._fourBtn.TabIndex = 19;
             this._fourBtn.Text = "4";
             this._fourBtn.UseVisualStyleBackColor = false;
-            this._fourBtn.Click += new System.EventHandler(this._btn_Click);
+            this._fourBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _fiveBtn
             // 
@@ -273,7 +276,7 @@ namespace HomeworkLesson19
             this._fiveBtn.TabIndex = 20;
             this._fiveBtn.Text = "5";
             this._fiveBtn.UseVisualStyleBackColor = false;
-            this._fiveBtn.Click += new System.EventHandler(this._btn_Click);
+            this._fiveBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _sixBtn
             // 
@@ -285,7 +288,7 @@ namespace HomeworkLesson19
             this._sixBtn.TabIndex = 21;
             this._sixBtn.Text = "6";
             this._sixBtn.UseVisualStyleBackColor = false;
-            this._sixBtn.Click += new System.EventHandler(this._btn_Click);
+            this._sixBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _minusBtn
             // 
@@ -295,6 +298,7 @@ namespace HomeworkLesson19
             this._minusBtn.TabIndex = 22;
             this._minusBtn.Text = "-";
             this._minusBtn.UseVisualStyleBackColor = true;
+            this._minusBtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // _oneBtn
             // 
@@ -306,7 +310,7 @@ namespace HomeworkLesson19
             this._oneBtn.TabIndex = 23;
             this._oneBtn.Text = "1";
             this._oneBtn.UseVisualStyleBackColor = false;
-            this._oneBtn.Click += new System.EventHandler(this._btn_Click);
+            this._oneBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _twoBtn
             // 
@@ -318,7 +322,7 @@ namespace HomeworkLesson19
             this._twoBtn.TabIndex = 24;
             this._twoBtn.Text = "2";
             this._twoBtn.UseVisualStyleBackColor = false;
-            this._twoBtn.Click += new System.EventHandler(this._btn_Click);
+            this._twoBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _threeBtn
             // 
@@ -330,7 +334,7 @@ namespace HomeworkLesson19
             this._threeBtn.TabIndex = 25;
             this._threeBtn.Text = "3";
             this._threeBtn.UseVisualStyleBackColor = false;
-            this._threeBtn.Click += new System.EventHandler(this._btn_Click);
+            this._threeBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _plusBtn
             // 
@@ -340,7 +344,7 @@ namespace HomeworkLesson19
             this._plusBtn.TabIndex = 26;
             this._plusBtn.Text = "+";
             this._plusBtn.UseVisualStyleBackColor = true;
-            this._plusBtn.Click += new System.EventHandler(this._plusBtn_Click);
+            this._plusBtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // _signBtn
             // 
@@ -362,7 +366,7 @@ namespace HomeworkLesson19
             this._zeroBtn.TabIndex = 28;
             this._zeroBtn.Text = "0";
             this._zeroBtn.UseVisualStyleBackColor = false;
-            this._zeroBtn.Click += new System.EventHandler(this._btn_Click);
+            this._zeroBtn.Click += new System.EventHandler(this.numberBtn_Click);
             // 
             // _pointBtn
             // 
