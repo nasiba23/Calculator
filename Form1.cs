@@ -14,6 +14,7 @@ namespace HomeworkLesson19
     {
         private bool _isEqualClicked;
         private bool _isPointClicked;
+        private double _memoryCache;
         
         public Form1()
         {
@@ -56,7 +57,6 @@ namespace HomeworkLesson19
             _isEqualClicked = false;
             var op = sender as Button;
             operationTxtBx.Text += $"{_inputTxtBx.Text} {op.Text} ";
-            //TODO: сделать так, чтобы текст инпута умножал при каждом нажатии *
             _inputTxtBx.Text = "";
         }
         private void _percentBtn_Click(object sender, EventArgs e)
@@ -80,15 +80,80 @@ namespace HomeworkLesson19
             {
                 operationTxtBx.Text += _inputTxtBx.Text;
             }
-            if ((operationTxtBx.Text.Select(ch => char.IsPunctuation(ch)).LastOrDefault()));
-            {
-                operationTxtBx.Text = operationTxtBx.Text.Remove(operationTxtBx.Text.Length - 2, 1);
-            }
             var dt = new DataTable();
             var result = dt.Compute(operationTxtBx.Text, "");
             _inputTxtBx.Text = result.ToString();
             operationTxtBx.Text = "";
             _isEqualClicked = true;
+        }
+
+        private void _rootBtn_Click(object sender, EventArgs e)
+        {
+            _isEqualClicked = false;
+            var result = Math.Sqrt(double.Parse(_inputTxtBx.Text));
+            operationTxtBx.Text += result.ToString();
+            _inputTxtBx.Text = "";
+        }
+
+        private void _squaredBtn_Click(object sender, EventArgs e)
+        {
+            _isEqualClicked = false;
+            var result = Math.Pow(double.Parse(_inputTxtBx.Text), 2);
+            operationTxtBx.Text += result.ToString();
+            _inputTxtBx.Text = "";
+        }
+
+        private void _invertBtn_Click(object sender, EventArgs e)
+        {
+            _isEqualClicked = false;
+            var result = (1 / double.Parse(_inputTxtBx.Text));
+            operationTxtBx.Text += result.ToString();
+            _inputTxtBx.Text = "";
+        }
+
+        private void _mPlusBtn_Click(object sender, EventArgs e)
+        {
+            _memoryCache += double.Parse(_inputTxtBx.Text);
+        }
+
+        private void _mrBtn_Click(object sender, EventArgs e)
+        {
+            _inputTxtBx.Text = _memoryCache.ToString();
+        }
+
+        private void _mMinusBtn_Click(object sender, EventArgs e)
+        {
+            _memoryCache = 0;
+            _isEqualClicked = false;
+            _isPointClicked = false;
+        }
+
+        private void _msBtn_Click(object sender, EventArgs e)
+        {
+            _memoryCache = double.Parse(_inputTxtBx.Text);
+            _isEqualClicked = false;
+            _isPointClicked = false;
+        }
+
+        private void _ceBtn_Click(object sender, EventArgs e)
+        {
+            _inputTxtBx.Text = "";
+            _isEqualClicked = false;
+            _isPointClicked = false;
+        }
+
+        private void _cBtn_Click(object sender, EventArgs e)
+        {
+            _inputTxtBx.Text = "";
+            operationTxtBx.Text = "";
+            _memoryCache = 0;
+            _isEqualClicked = false;
+            _isPointClicked = false;
+        }
+
+        private void _xBtn_Click(object sender, EventArgs e)
+        {
+            _inputTxtBx.Text = _inputTxtBx.Text.Remove(_inputTxtBx.Text.Length - 1, 1);
         }
     }
 }
